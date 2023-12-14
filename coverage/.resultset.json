@@ -269,12 +269,22 @@
           null,
           1,
           1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
       "/Users/kdhubbard/mod_5/personal_projects/book-chat-api/app/models/book_club_user.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
           1,
           1,
           null
@@ -405,6 +415,6 @@
         ]
       }
     },
-    "timestamp": 1702574009
+    "timestamp": 1702574589
   }
 }
