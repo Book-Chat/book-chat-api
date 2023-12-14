@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe BookClubSubject, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "associations" do 
+    it { should belong_to :subject }
+    it { should belong_to :book_club }
+  end
 end
+
