@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :password_digest, presence: true
 
   has_secure_password
+
+  has_many :book_club_users
+  has_many :book_clubs, through: :book_club_users
+  has_many :user_books
+  has_many :books, through: :user_books
 end
