@@ -313,11 +313,18 @@
           null,
           1,
           1,
+          2,
+          2,
+          2,
+          null,
           null
         ]
       },
       "/Users/kdhubbard/mod_5/personal_projects/book-chat-api/app/models/subject.rb": {
         "lines": [
+          1,
+          1,
+          1,
           1,
           null
         ]
@@ -355,6 +362,6 @@
         ]
       }
     },
-    "timestamp": 1702571773
+    "timestamp": 1702572010
   }
 }
