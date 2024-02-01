@@ -5,3 +5,59 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+BookClubUser.destroy_all
+BookClubSubject.destroy_all
+UserBook.destroy_all
+BookClubBook.destroy_all
+Subject.destroy_all
+BookClub.destroy_all
+Book.destroy_all
+Meeting.destroy_all
+User.destroy_all
+
+club_1 = BookClub.create!(name: "Lavar Burton's Readers")
+club_2 = BookClub.create!(name: "Speculative and SciFi")
+club_3 = BookClub.create!(name: "Just Cozies")
+club_4 = BookClub.create!(name: "Mysteries and Monsters")
+club_5 = BookClub.create!(name: "Here for the Characters")
+
+user_1 = User.create!(email: "suzy@books.com", username: "suzyreads", first_name: "Suzy", last_name: "Sparkle", password: "password")
+user_2 = User.create!(email: "james@books.com", username: "jamesj", first_name: "James", last_name: "Juniper", password: "password")
+user_3 = User.create!(email: "wolfie@books.com", username: "wolfgang", first_name: "Wolfgang", last_name: "Hubbard", password: "password")
+user_4 = User.create!(email: "maggie@books.com", username: "mags", first_name: "Magaret", last_name: "Loves PB", password: "password")
+user_5 = User.create!(email: "momo@books.com", username: "Momo", first_name: "Momo", last_name: "Loves Ball", password: "password")
+
+club_user_1 = BookClubUser.create!(user: user_1, book_club: club_1, role: 1)
+club_user_2 = BookClubUser.create!(user: user_2, book_club: club_1, role: 0)
+club_user_3 = BookClubUser.create!(user: user_3, book_club: club_1, role: 0)
+club_user_4 = BookClubUser.create!(user: user_4, book_club: club_1, role: 2)
+club_user_5 = BookClubUser.create!(user: user_1, book_club: club_2, role: 0)
+club_user_6 = BookClubUser.create!(user: user_2, book_club: club_2, role: 1)
+club_user_7 = BookClubUser.create!(user: user_5, book_club: club_2, role: 0)
+club_user_8 = BookClubUser.create!(user: user_3, book_club: club_3, role: 1)
+club_user_9 = BookClubUser.create!(user: user_4, book_club: club_4, role: 1)
+club_user_10 = BookClubUser.create!(user: user_5, book_club: club_5, role: 1)
+club_user_11 = BookClubUser.create!(user: user_4, book_club: club_3, role: 0)
+club_user_12 = BookClubUser.create!(user: user_5, book_club: club_4, role: 2)
+club_user_12 = BookClubUser.create!(user: user_3, book_club: club_5, role: 0)
+
+subject_1 = Subject.create!(name: "Speculative Fiction", type: 0, description: "What will the future hold doomy stuff?")
+subject_2 = Subject.create!(name: "Mystery", type: 0, description: "Who dunnit?")
+subject_3 = Subject.create!(name: "LGBTQIA", type: 1, description: "This club is for LGBTQIA identifying folx.")
+subject_4 = Subject.create!(name: "Cozy Mystery", type: 0, description: "Curl up with a blanket and don't stress about who dunnit.")
+subject_5 = Subject.create!(name: "Celebrity Selections", type: 2, description: "These books were selected by celebs.")
+subject_6 = Subject.create!(name: "Character Driven", type: 2, description: "This club is about books with magnificently written characters." )
+subject_7 = Subject.create!(name: "Horror", type: 0, description: "Terrifyingly page turning.")
+subject_8 = Subject.create!(name: "Monsters", type: 2, description: "Could be any genre, but there's always monsters.")
+subject_9 = Subject.create!(name: "Science Fiction", type: 0, description: "It might have real science, but it's definitely got some fictional science.")
+
+club_sub_1 = BookClubSubject.create!(book_club: club_1, subject: subject_5)
+club_sub_2 = BookClubSubject.create!(book_club: club_1, subject: subject_6)
+club_sub_3 = BookClubSubject.create!(book_club: club_2, subject: subject_1)
+club_sub_4 = BookClubSubject.create!(book_club: club_2, subject: subject_9)
+club_sub_5 = BookClubSubject.create!(book_club: club_3, subject: subject_4)
+club_sub_6 = BookClubSubject.create!(book_club: club_4, subject: subject_2)
+club_sub_7 = BookClubSubject.create!(book_club: club_4, subject: subject_7)
+club_sub_8 = BookClubSubject.create!(book_club: club_4, subject: subject_8)
+club_sub_9 = BookClubSubject.create!(book_club: club_5, subject: subject_6)
