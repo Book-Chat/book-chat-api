@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-02-01T15:15:40-07:00">2024-02-01T15:15:40-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-02-12T13:40:50-07:00">2024-02-12T13:40:50-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>175</b> relevant lines,
-    <span class="green"><b>175</b> lines covered</span> and
+    <b>179</b> relevant lines,
+    <span class="green"><b>179</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -150,9 +150,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3c1c1c5f19aa59ac71a59ec76c41956f016ceea4" class="src_link" title="app/models/subject.rb">app/models/subject.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">7</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -260,9 +260,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#356a9a77bf1523c1bede5e63e48ab3a3615b9835" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -1132,8 +1132,8 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>7</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1162,7 +1162,7 @@
 
             
 
-            <code class="ruby">  validates :type, presence: true</code>
+            <code class="ruby">  validates :category, presence: true</code>
           </li>
         </div>
       
@@ -1206,7 +1206,7 @@
 
             
 
-            <code class="ruby">  has_many :book_club_subjects</code>
+            <code class="ruby">  enum :category, { genre: 0, special_interest: 1, taste: 2 }</code>
           </li>
         </div>
       
@@ -1217,12 +1217,23 @@
 
             
 
+            <code class="ruby">  has_many :book_club_subjects</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  has_many :book_clubs, through: :book_club_subjects</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -3400,8 +3411,8 @@
     
 
     <div class="t-line-summary">
-      <b>1</b> relevant lines.
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3424,35 +3435,35 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html</code>
+            
+
+            <code class="ruby">  namespace :api do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    namespace :v1 do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # Defines the root path route (&quot;/&quot;)</code>
+            
+
+            <code class="ruby">      resources :book_clubs</code>
           </li>
         </div>
       
@@ -3463,12 +3474,23 @@
 
             
 
-            <code class="ruby">  # root &quot;articles#index&quot;</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -4463,7 +4485,7 @@
 
             
 
-            <code class="ruby">    it { should validate_presence_of :type }</code>
+            <code class="ruby">    it { should validate_presence_of :category }</code>
           </li>
         </div>
       

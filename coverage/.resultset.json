@@ -180,8 +180,9 @@
       "/Users/kdhubbard/mod_5/personal_projects/book-chat-api/config/routes.rb": {
         "lines": [
           1,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -378,6 +379,7 @@
           null,
           1,
           1,
+          1,
           null
         ]
       },
@@ -450,6 +452,6 @@
         ]
       }
     },
-    "timestamp": 1706825740
+    "timestamp": 1707770450
   }
 }
