@@ -11,9 +11,9 @@ BookClubSubject.destroy_all
 UserBook.destroy_all
 BookClubBook.destroy_all
 Subject.destroy_all
+Meeting.destroy_all
 BookClub.destroy_all
 Book.destroy_all
-Meeting.destroy_all
 User.destroy_all
 
 club_1 = BookClub.create!(name: "Lavar Burton's Readers")
@@ -62,8 +62,24 @@ club_sub_7 = BookClubSubject.create!(book_club: club_4, subject: subject_7)
 club_sub_8 = BookClubSubject.create!(book_club: club_4, subject: subject_8)
 club_sub_9 = BookClubSubject.create!(book_club: club_5, subject: subject_6)
 
-meeting_1 = Meeting.create!(book_club: club_1, location: "Park Hill Library", date_time: '2024-06-08 18:00:00')
-# meeting_2 = Meeting.create!(book_club: club_1, location: "Park Hill Library", date_time: 2024-07-08 18:00:00)
-# meeting_3 = Meeting.create!(book_club: club_1, location: "Park Hill Library", date_time: 2024-08-08 18:00:00)
-# meeting_4 = Meeting.create!(book_club: club_2, location: "Cheesman Park", date_time: 2024-07-10 12:00:00)
-# meeting_5 = Meeting.create!(book_club: club_2, location: "Cheesman Park", date_time: 2024-08-10 12:00:00)
+meeting_1 = Meeting.create!(book_club: club_1, location: "Park Hill Library", date_time: "2024-06-08 18:00:00")
+meeting_2 = Meeting.create!(book_club: club_1, location: "Park Hill Library", date_time: "2024-07-08 18:00:00")
+meeting_3 = Meeting.create!(book_club: club_1, location: "Park Hill Library", date_time: "2024-08-08 18:00:00")
+meeting_4 = Meeting.create!(book_club: club_2, location: "Cheesman Park", date_time: "2024-07-10 12:00:00")
+meeting_5 = Meeting.create!(book_club: club_2, location: "Cheesman Park", date_time: "2024-08-10 12:00:00")
+
+book_1 = Book.create!(author: "Nana Kwame Adjei-Brenyah", title: "Chain Gang All Stars", google_id: "J07kEAAAQBAJ")
+book_2 = Book.create!(author: "N. K. Jemisin", title: "The Fifth Season", google_id: "J0tIAgAAQBAJ")
+book_3 = Book.create!(author: "Celeste Ng", title: "Little Fires Everywhere", google_id: "OsUPDgAAQBAJ")
+book_4 = Book.create!(author: "Seth Grahame-Smith", title: "Pride and Prejudice and Zombies", google_id: "x5xPaPeZzmUC")
+book_5 = Book.create!(author: "Andy Weir", title: "Project Hail Mary", google_id: "-Ff2DwAAQBAJ")
+
+club_book_1 = BookClubBook.create!(book: book_1, book_club: club_1, meeting: meeting_1)
+club_book_2 = BookClubBook.create!(book: book_3, book_club: club_1, meeting: meeting_2)
+club_book_3 = BookClubBook.create!(book: book_2, book_club: club_2, meeting: meeting_4)
+club_book_4 = BookClubBook.create!(book: book_4, book_club: club_2, meeting: meeting_5)
+club_book_5 = BookClubBook.create!(book: book_5, book_club: club_1, meeting: meeting_3)
+
+
+
+
